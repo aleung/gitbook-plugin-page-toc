@@ -1,0 +1,18 @@
+{
+  "name": "gitbook-plugin-page-toc",
+  "description": "Adds table of conents and anchors inside page",
+  "main": "index.js",
+  "version": "1.0.0",
+  "engines": {
+    "gitbook": "3.*"
+  },
+  "keywords": [
+    "gitbook",
+    "anchor",
+    "anchorjs",
+    "toc"
+  ],
+  "author": "Leo Liang <leo.liang@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/aleung/gitbook-plugin-page-toc"
+}
