@@ -1,6 +1,7 @@
 require(['gitbook'], function(gitbook) {
 
     var selector;
+    var position;
 
     anchors.options = {
         placement: 'left'
@@ -8,6 +9,7 @@ require(['gitbook'], function(gitbook) {
 
     gitbook.events.bind('start', function(e, config) {
         selector = config['page-toc'].selector;
+        position = config['page-toc'].position;
     });
 
     gitbook.events.bind('page.change', function() {
@@ -43,23 +45,33 @@ require(['gitbook'], function(gitbook) {
             return e;
         }
 
+        anchors.removeAll();
         anchors.add(selector);
 
-        var text, href, currentLevel;
-        var prevLevel = 0;
-        var nav = document.createElement('nav');
-        var container = nav;
-        for (var i = 0; i < anchors.elements.length; i++) {
-            text = anchors.elements[i].textContent;
-            href = anchors.elements[i].querySelector('.anchorjs-link').getAttribute('href');
-            currentLevel = anchorLevel(anchors.elements[i].nodeName);
-            container = navTreeNode(container, currentLevel - prevLevel);
-            addNavItem(container, href, text);
-            prevLevel = currentLevel;
+        if (anchors.elements.length > 1) {
+            var text, href, currentLevel;
+            var prevLevel = 0;
+            var nav = document.createElement('nav');
+            nav.className = 'page-toc';
+            var container = nav;
+            for (var i = 0; i < anchors.elements.length; i++) {
+                text = anchors.elements[i].textContent;
+                href = anchors.elements[i].querySelector('.anchorjs-link').getAttribute('href');
+                currentLevel = anchorLevel(anchors.elements[i].nodeName);
+                container = navTreeNode(container, currentLevel - prevLevel);
+                addNavItem(container, href, text);
+                prevLevel = currentLevel;
+            }
+
+            if (position === 'top') {
+                var section = document.body.querySelector('.markdown-section');
+                section.insertBefore(nav, section.firstChild);
+            } else {
+                var first = anchors.elements[0];
+                first.parentNode.insertBefore(nav, first);
+            }
         }
 
-        nav.className = 'right-nav';
-        document.body.querySelector('.page-wrapper').appendChild(nav);
     })
 
 });

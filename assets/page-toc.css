@@ -1,29 +1,25 @@
-.right-nav{
-	position: fixed;
-	right: 100px;
-	top: 50px;
-	max-width: 200px;
-	min-width: 150px;
+.page-toc:before {
+    content: "Table of Contents";
+    font-weight: bold;
 }
-.right-nav .title{
-	position: relative;
-	display: block;
-	padding: 10px 15px;
-	margin-bottom: -1px;
-	background-color: #fff;
-	border: 1px solid #ddd;
-	color: #777;
-	background-color: #eee;
-	cursor: default;
-	text-align: center;
+
+.page-toc {
+	float: right;
+    background: #f8f8f8;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 3px;
+    padding: 20px !important;
+	font-size: smaller;
 }
-.right-nav a {
-	position: relative;
-	display: block;
-	padding: 10px 15px;
-	margin-bottom: -1px;
-	border: 1px solid #ddd;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
+
+.page-toc ul {
+    padding-left: 20px;
+}
+
+.page-toc > ul {
+	padding-left: 0;
+}
+
+.page-toc li {
+    list-style: none;
 }
