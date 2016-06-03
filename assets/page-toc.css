@@ -1,0 +1,29 @@
+.right-nav{
+	position: fixed;
+	right: 100px;
+	top: 50px;
+	max-width: 200px;
+	min-width: 150px;
+}
+.right-nav .title{
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	background-color: #fff;
+	border: 1px solid #ddd;
+	color: #777;
+	background-color: #eee;
+	cursor: default;
+	text-align: center;
+}
+.right-nav a {
+	position: relative;
+	display: block;
+	padding: 10px 15px;
+	margin-bottom: -1px;
+	border: 1px solid #ddd;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}

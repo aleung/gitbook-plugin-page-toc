@@ -8,8 +8,13 @@ It adds anchors link to headings inside the page as well.
 
 Add the plugin to your `book.json`:
 
+``` json
     {
-      "plugins" : [ "page-toc" ]
+      "plugins": [ "page-toc" ],
+      "pluginsConfig": {
+        "selector": ".markdown-section h2, .markdown-section h3"
+      }
     }
+```
 
-## Configuration
+Default CSS selector is to include headings from level 1 to level 4.
