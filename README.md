@@ -1,6 +1,6 @@
 # gitbook-plugin-page-toc
 
-Add table of contents to every page in your GitBook.
+Add Table of Contents (TOC) to every page in your GitBook.
 
 It adds anchors link to headings inside the page as well.
 
@@ -12,9 +12,20 @@ Add the plugin to your `book.json`:
     {
       "plugins": [ "page-toc" ],
       "pluginsConfig": {
-        "selector": ".markdown-section h2, .markdown-section h3"
       }
     }
 ```
 
-Default CSS selector is to include headings from level 1 to level 4.
+## Configuration
+
+- `selector` : CSS selector to select the elements to put anchors on
+  - Default: `.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4`, 
+    which include headings from level 1 to level 4.
+- `position` : Position of TOC
+  - Allow values:
+    - `before-first` _(default)_ : Before the first heading
+    - `top` : On top of the page
+
+## CSS Customization
+
+The TOC elements have class attribute `.page-toc`. You can override the styles in `styles/website.css`.
