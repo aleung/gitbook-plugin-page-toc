@@ -1,0 +1,5 @@
+# First exclude everything
+*
+
+# Include what we need
+!assets/**
