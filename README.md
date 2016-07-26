@@ -19,10 +19,10 @@ Add the plugin to your `book.json`:
 ## Configuration
 
 - `selector` : CSS selector to select the elements to put anchors on
-  - Default: `.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4`, 
+  - Default: `.markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4`,
     which include headings from level 1 to level 4.
 - `position` : Position of TOC
-  - Allow values:
+  - Allowed values:
     - `before-first` _(default)_ : Before the first heading
     - `top` : On top of the page
 
