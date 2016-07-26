@@ -4,6 +4,8 @@ Add Table of Contents (TOC) to every page in your GitBook.
 
 It adds anchors link to headings inside the page as well.
 
+![](https://raw.githubusercontent.com/aleung/gitbook-plugin-page-toc/master/doc/screenshot-1.png)
+
 ## Install
 
 Add the plugin to your `book.json`:
