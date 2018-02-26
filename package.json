@@ -21,6 +21,11 @@
           "before-first",
           "top"
         ]
+      },
+      "showByDefault": {
+         "type": "boolean",
+         "default": true,
+         "title": "Whether to show the TOC on every page by default"
       }
     }
   },
