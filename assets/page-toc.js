@@ -2,6 +2,7 @@ require(['gitbook'], function(gitbook) {
 
     var selector;
     var position;
+    var showByDefault;
 
     anchors.options = {
         placement: 'left'
@@ -49,10 +50,9 @@ require(['gitbook'], function(gitbook) {
         anchors.removeAll();
         anchors.add(selector);
 
-        var showToc = document.body.querySelector('.showToc');
-        var hideToc = document.body.querySelector('.hideToc');
+        var showToc = gitbook.state.page.showToc;
 
-        if (anchors.elements.length > 1 && (showByDefault || showToc != null) && hideToc == null) {
+        if (anchors.elements.length > 1 && (showByDefault || showToc) && showToc != false) {
             var text, href, currentLevel;
             var prevLevel = 0;
             var nav = document.createElement('nav');
