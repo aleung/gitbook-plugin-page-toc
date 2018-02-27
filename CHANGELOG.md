@@ -1,3 +1,6 @@
+## 1.1.0 (2018-2-27)
+
+* Show or hide TOC by `showToc` property in front matter
 
 ## 1.0.2 (2016-7-26)
 

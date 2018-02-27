@@ -30,7 +30,7 @@ Add the plugin to your `book.json`:
     - `before-first` _(default)_ : Before the first heading
     - `top` : On top of the page
 - `showByDefault`: Whether to show the TOC on all pages by default.
-    Default value is `true`.
+  - Default:  `true`.
 
 ## Use
 
