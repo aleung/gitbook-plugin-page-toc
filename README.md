@@ -13,9 +13,11 @@ Add the plugin to your `book.json`:
 {
   "plugins": [ "page-toc" ],
   "pluginsConfig": {
-     "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
-     "position": "before-first",
-     "showByDefault": true
+    "page-toc": {
+      "selector": ".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4",
+      "position": "before-first",
+      "showByDefault": true
+    }
   }
 }
 ```
