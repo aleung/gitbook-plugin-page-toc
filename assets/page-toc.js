@@ -70,6 +70,9 @@ require(['gitbook'], function(gitbook) {
             if (position === 'top') {
                 var section = document.body.querySelector('.markdown-section');
                 section.insertBefore(nav, section.firstChild);
+            } else if (position === 'after-first') {
+                var first = anchors.elements[0];
+                first.parentNode.insertBefore(nav, first.nextSibling);
             } else {
                 var first = anchors.elements[0];
                 first.parentNode.insertBefore(nav, first);
