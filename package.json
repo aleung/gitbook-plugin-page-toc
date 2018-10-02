@@ -24,9 +24,9 @@
         ]
       },
       "showByDefault": {
-        "type": "boolean",
-        "default": true,
-        "title": "Whether to show the TOC on every page by default"
+         "type": "boolean",
+         "default": true,
+         "title": "Whether to show the TOC on every page by default"
       }
     }
   },
