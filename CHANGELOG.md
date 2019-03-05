@@ -1,3 +1,7 @@
+## 1.1.1 (2019-3-5)
+
+* Fix `pluginsConfig` define in README.md (#7)
+
 ## 1.1.0 (2018-2-27)
 
 * Show or hide TOC by `showToc` property in front matter
