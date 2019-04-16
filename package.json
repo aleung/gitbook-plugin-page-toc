@@ -1,5 +1,5 @@
 {
-  "name": "gitbook-plugin-page-toc",
+  "name": "gitbook-plugin-page-toc-af",
   "description": "Adds table of conents and anchors inside page",
   "main": "index.js",
   "version": "1.1.0",
